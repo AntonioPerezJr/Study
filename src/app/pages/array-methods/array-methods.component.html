@@ -1,122 +1,145 @@
 <div class="c-content">
-    <h1> .map()</h1>
-    <p> Nós utilizamos o .map() quando queremos fazer alguma modificação nos elementos de um Array.</p>
-    <div class="c-code">
-        <p>{{ userList | json }}</p>
-        <div>
-            <button (click)="onExecuteMap()">vamos rodar!</button>
+    <h1>Array methods</h1>
+    <mat-card class="c-content__card">
+        <h1><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .map()</h1>
+        <p> Nós utilizamos o .map() quando queremos fazer alguma modificação nos elementos de um Array.</p>
+        <div class="c-code">
+            <p>{{ userList | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onExecuteMap()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <p>Também pode ser interessante se quisermos alterar a estrutura dos objetos do Array. Podemos pegar o exemplo de cima: suponha que a gente agora queira um Array com o nome de todos os usuários da nossa lista.</p>
-    <div class="c-code">
-        <p>{{ userNameList | json }}</p>
-        <div>
-            <button (click)="onExecuteMapName()">vamos rodar!</button>
+        <p>Também pode ser interessante se quisermos alterar a estrutura dos objetos do Array. Podemos pegar o exemplo de cima: suponha que a gente agora queira um Array com o nome de todos os usuários da nossa lista.</p>
+        <div class="c-code">
+            <p>{{ userNameList | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onExecuteMapName()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <h1>.filter()</h1>
-    <p> Como o próprio nome indica, serve para filtrarmos os elementos de um Array. Passamos para ele uma função. Se essa função retornar true, o elemento será inserido no novo Array que será criado. Se a função retornar false, o elemento será ignorado.</p>
-    <div class="c-code">
-        <p>{{ userFilterList | json }}</p>
-        <p>{{ usersFilteredList | json }}</p>
-        <div>
-            <button (click)="onFilteredInstitute()">vamos rodar!</button>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .filter()</h1>
+        <p> Como o próprio nome indica, serve para filtrarmos os elementos de um Array. Passamos para ele uma função. Se essa função retornar true, o elemento será inserido no novo Array que será criado. Se a função retornar false, o elemento será ignorado.</p>
+        <div class="c-code">
+            <p>{{ userFilterList | json }}</p>
+            <p>{{ usersFilteredList | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onFilteredInstitute()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <h1>.find()</h1>
-    <p> Usamos esse método quando queremos encontrar algum elemento dentro no Array. Para isso, passamos uma função que irá retornar true ou false. O primeiro true que for retornado irá finalizar a função e retornar o elemento em que estamos.</p>
-    <div class="c-code">
-        <p>{{ userFindList | json }}</p>
-        <p>{{ usersFindList | json }}</p>
-        <div>
-            <button (click)="onFindName()">vamos rodar!</button>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .find()</h1>
+        <p> Usamos esse método quando queremos encontrar algum elemento dentro no Array. Para isso, passamos uma função que irá retornar true ou false. O primeiro true que for retornado irá finalizar a função e retornar o elemento em que estamos.</p>
+        <div class="c-code">
+            <p>{{ userFindList | json }}</p>
+            <p>{{ usersFindList | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onFindName()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <h1>.some()</h1>
+    </mat-card>
+    <mat-card class="c-content__card">
+    <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .some()</h1>
     <p> O .some() faz algo parecido com o .every(). A diferença é que o .every() só retorna true se todos os elementos passarem no teste. O .some() retorna true se pelo menos um elemento do Array passar no teste.</p>
     <div class="c-code">
         <p>{{ userSomeList | json }}</p>
         <p>{{ userSomeExist | json }}</p>
         <div>
-            <button (click)="onSomeName()">vamos rodar!</button>
+            <button mat-raised-button color="primary" (click)="onSomeName()">vamos rodar!</button>
         </div>
     </div>
-    <h1>.findIndex()</h1>
-    <p> Faz o mesmo que o .find(), mas retorna o índice do elemento encontrado ao invés de retornar o próprio elemento.</p>
-    <div class="c-code">
-        <p>{{ userFinsIndexList | json }}</p>
-        <p>Indice da lista original: {{ userFinsIndexExist | json }}</p>
-        <div>
-            <button (click)="onFinsIndexName()">vamos rodar!</button>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .findIndex()</h1>
+        <p> Faz o mesmo que o .find(), mas retorna o índice do elemento encontrado ao invés de retornar o próprio elemento.</p>
+        <div class="c-code">
+            <p>{{ userFinsIndexList | json }}</p>
+            <p>Indice da lista original: {{ userFinsIndexExist | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onFinsIndexName()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <h1>.every()</h1>
-    <p> Serve para testarmos se todos os elementos do Array passam em uma condição. Passamos uma função que retorna true ou false. Se todos os retornos forem true, significa que todos os elementos passaram no teste, e a função retornará true.</p>
-    <div class="c-code">
-        <p>{{ userEveryList | json }}</p>
-        <p>verifica se os itens da lista tem a remunaração maior que 500: {{ userEveryCheck | json }}</p>
-        <div>
-            <button (click)="onEveryCheck()">vamos rodar!</button>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .every()</h1>
+        <p> Serve para testarmos se todos os elementos do Array passam em uma condição. Passamos uma função que retorna true ou false. Se todos os retornos forem true, significa que todos os elementos passaram no teste, e a função retornará true.</p>
+        <div class="c-code">
+            <p>{{ userEveryList | json }}</p>
+            <p>verifica se os itens da lista tem a remunaração maior que 500: {{ userEveryCheck | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onEveryCheck()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <h1>.sort()</h1>
-    <p> O .sort() serve para ordenar os elementos de Arrays. Muitas pessoas utilizam este método de maneira errada, apenas executando array.sort(). Isso pode causar retornos inesperados, pois os elementos serão convertidos em texto.
-        O correto é passar uma função que compare dois elementos. Assim, podemos ordenar um Array com qualquer tipo de objeto, ordenando por qualquer propriedade.</p>
-    <div class="c-code">
-        <p>{{ numberList | json }}</p>
-        <div>
-            <button (click)="onSortList()">vamos rodar!</button>
-            <button (click)="onSortListDesc()">vamos rodar! (DESC)</button>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .sort()</h1>
+        <p> O .sort() serve para ordenar os elementos de Arrays. Muitas pessoas utilizam este método de maneira errada, apenas executando array.sort(). Isso pode causar retornos inesperados, pois os elementos serão convertidos em texto.
+            O correto é passar uma função que compare dois elementos. Assim, podemos ordenar um Array com qualquer tipo de objeto, ordenando por qualquer propriedade.</p>
+        <div class="c-code">
+            <p>{{ numberList | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onSortList()">vamos rodar!</button>
+                <button mat-raised-button color="primary" (click)="onSortListDesc()">vamos rodar! (DESC)</button>
+            </div>
         </div>
-    </div>
-    <p>Podemos utilizar em elementos mais complexos:</p>
-    <div class="c-code">
-        <p>{{ userSortList | json }}</p>
-        <div>
-            <button (click)="onSortListObjects()">vamos rodar!</button>
+        <p>Podemos utilizar em elementos mais complexos:</p>
+        <div class="c-code">
+            <p>{{ userSortList | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onSortListObjects()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <h1>.reduce() </h1>
-    <p> Esta função serve para reduzirmos o conteúdo de um Array para apenas um elemento. O exemplo mais clássico é somar todos os valores de um Array.
-    <div class="c-code">
-        <p>{{ array1 | json }}</p>
-        <p>Soma à partir do valor inicial: {{ sumWithInitial | json }}</p>
-        <div>
-            <button (click)="onReduceCheck()">vamos rodar!</button>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .reduce() </h1>
+        <p> Esta função serve para reduzirmos o conteúdo de um Array para apenas um elemento. O exemplo mais clássico é somar todos os valores de um Array.
+        <div class="c-code">
+            <p>{{ array1 | json }}</p>
+            <p>Soma à partir do valor inicial: {{ sumWithInitial | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onReduceCheck()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <h1>.forEach()</h1>
-    <p> forEach() chama uma função para cada elemento na matriz, nesse exemplo iremos extrair o nome de cada elemento e criar uma nova lista só com os nomes.
-    <div class="c-code">
-        <p>{{ userForeachList | json }}</p>
-        <p>{{ resultUserForeachList | json }}</p>
-        <p>Soma à partir do valor inicial: {{ sumWithInitial | json }}</p>
-        <div>
-            <button (click)="onForeachCheck()">vamos rodar!</button>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .forEach()</h1>
+        <p> forEach() chama uma função para cada elemento na matriz, nesse exemplo iremos extrair o nome de cada elemento e criar uma nova lista só com os nomes.
+        <div class="c-code">
+            <p>{{ userForeachList | json }}</p>
+            <p>{{ resultUserForeachList | json }}</p>
+            <p>Soma à partir do valor inicial: {{ sumWithInitial | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onForeachCheck()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <h1>.join()</h1>
-    <p> O método join() une todos os elementos de um array em uma string.
-    <div class="c-code">
-        <p>Lista: {{ listItensJoin | json }}</p>
-        <p>Padrão: {{ joinSeparatorDefault | json }}</p>
-        <p>Por ponto: {{ joinSeparatorDot | json }}</p>
-        <p>Por traço: {{ joinSeparatorTrace | json }}</p>
-        <div>
-            <button (click)="onJoinCheck()">vamos rodar!</button>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .join()</h1>
+        <p> O método join() une todos os elementos de um array em uma string.
+        <div class="c-code">
+            <p>Lista: {{ listItensJoin | json }}</p>
+            <p>Padrão: {{ joinSeparatorDefault | json }}</p>
+            <p>Por ponto: {{ joinSeparatorDot | json }}</p>
+            <p>Por traço: {{ joinSeparatorTrace | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onJoinCheck()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <h1>.split()</h1>
-    <p> Esse método divide um objeto String em uma matriz de strings, separando a string em substrings à partir de um padrão.
-    <div class="c-code">
-        <p>String completa: {{ splitString | json }}</p>
-        <p>resultado: {{ splitResultList | json }}</p>
-        <div>
-            <button (click)="onSplitCheck()">vamos rodar!</button>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .split()</h1>
+        <p> Esse método divide um objeto String em uma matriz de strings, separando a string em substrings à partir de um padrão.
+        <div class="c-code">
+            <p>String completa: {{ splitString | json }}</p>
+            <p>resultado: {{ splitResultList | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onSplitCheck()">vamos rodar!</button>
+            </div>
         </div>
-    </div>
-    <div class="c-card">
-        <h1>Spread Operator (ES6)</h1>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> Spread Operator (ES6)</h1>
         <p> Sintaxe de Espalhamento (Spread syntax) permite que um objeto iterável, como uma expressão de array ou uma string seja expandido para ser usado onde zero ou mais argumentos (para chamadas de funções) ou elementos (para arrays literais) são esperados, ou que um objeto seja expandido onde zero ou mais pares propriedade:valor (para objetos literais) são esperados </p>
         <p> <b>Atribuição de Matriz (Array assignment)</b> - O operador de propagação permite que você coloque facilmente uma versão expandida de uma matriz em outra matriz. Isso é demonstrado no exemplo abaixo:</p>
         <div class="c-code">
@@ -130,25 +153,33 @@
         <div class="c-code">
 
         </div>
-    </div>
-    <h1>.reverse()</h1>
-    <p> reverse() reverte o elemento de um array. O primeiro elemento do array se torna o último e o último se torna o primeiro.
-    <div class="c-code">
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .reverse()</h1>
+        <p> reverse() reverte o elemento de um array. O primeiro elemento do array se torna o último e o último se torna o primeiro.
+        <div class="c-code">
 
-    </div>
-    <h1>.push()</h1>
-    <p> push() anexa o(s) elemento(s) fornecido(s) no último da matriz e retorna o comprimento da nova matriz.
-    <div class="c-code">
+        </div>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .push()</h1>
+        <p> push() anexa o(s) elemento(s) fornecido(s) no último da matriz e retorna o comprimento da nova matriz.
+        <div class="c-code">
 
-    </div>
-    <h1>.concat() </h1>
-    <p> Este método adiciona duas ou mais strings e retorna uma nova string única.
-    <div class="c-code">
+        </div>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .concat() </h1>
+        <p> Este método adiciona duas ou mais strings e retorna uma nova string única.
+        <div class="c-code">
 
-    </div>
-    <h1>.length </h1>
-    <p> Retorna o comprimento da string.
-    <div class="c-code">
+        </div>
+    </mat-card>
+    <mat-card class="c-content__card">
+        <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .length </h1>
+        <p> Retorna o comprimento da string.
+        <div class="c-code">
 
-    </div>
+        </div>
+    </mat-card>
 </div>
