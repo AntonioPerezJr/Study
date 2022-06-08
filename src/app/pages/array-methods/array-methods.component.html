@@ -143,42 +143,74 @@
         <p> Sintaxe de Espalhamento (Spread syntax) permite que um objeto iterável, como uma expressão de array ou uma string seja expandido para ser usado onde zero ou mais argumentos (para chamadas de funções) ou elementos (para arrays literais) são esperados, ou que um objeto seja expandido onde zero ou mais pares propriedade:valor (para objetos literais) são esperados </p>
         <p> <b>Atribuição de Matriz (Array assignment)</b> - O operador de propagação permite que você coloque facilmente uma versão expandida de uma matriz em outra matriz. Isso é demonstrado no exemplo abaixo:</p>
         <div class="c-code">
-
+            <p>Lista 1: {{ listSpreadFirst | json }}</p>
+            <p>Lista 2: {{ listSpreadSecond | json }}</p>
+            <p>Lista 3: {{ listSpreadThird | json }}</p>
         </div>
-        <p>Você pode colocar a matriz expandida em qualquer posição e obter o efeito esperado:</p>
+        <p>Resultado do merge da primeira com a segunda lista:</p>
         <div class="c-code">
-
+            <p>{{ listSpreadResult1 | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onSpreadCheck()">vamos rodar!</button>
+            </div>
         </div>
-        <p> <b>Atribuição de Matriz (Array assignment)</b> - O operador de propagação permite que você coloque facilmente uma versão expandida de uma matriz em outra matriz. Isso é demonstrado no exemplo abaixo:</p>
+        <p>Atribuição em qualquer local que desejar, ex. lista 1 lista 3 e lista 2</p>
         <div class="c-code">
-
+            <p>{{ listSpreadResult2 | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onSpreadCheckPosition()">vamos rodar!</button>
+            </div>
         </div>
     </mat-card>
     <mat-card class="c-content__card">
         <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .reverse()</h1>
         <p> reverse() reverte o elemento de um array. O primeiro elemento do array se torna o último e o último se torna o primeiro.
         <div class="c-code">
-
+            <p>{{ userReverseList | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onExecuteReverse()">vamos rodar!</button>
+            </div>            
         </div>
     </mat-card>
     <mat-card class="c-content__card">
         <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .push()</h1>
         <p> push() anexa o(s) elemento(s) fornecido(s) no último da matriz e retorna o comprimento da nova matriz.
         <div class="c-code">
-
+            <p>{{ userPushList | json }}</p>
+            <p>{{ nomeInput | json }}</p>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input type="text" matInput [(ngModel)]="nomeInput" placeholder="Ex. nome">
+            </mat-form-field>  
+            <div>
+                <button mat-raised-button color="primary" (click)="onExecutePush()">vamos rodar!</button>
+            </div>  
         </div>
     </mat-card>
     <mat-card class="c-content__card">
         <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .concat() </h1>
         <p> Este método adiciona duas ou mais strings e retorna uma nova string única.
         <div class="c-code">
-
+            <p>Lista 1: {{ userConcatList1 | json }}</p>
+            <p>Lista 2: {{ userConcatList2 | json }}</p>
+            <p>Resultado: {{ resultConcatList | json }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onExecuteConcat()">vamos rodar!</button>
+            </div> 
         </div>
     </mat-card>
     <mat-card class="c-content__card">
         <h1 class="c-content__title"><mat-icon class="c-content__icon" color="primary" aria-hidden="false" aria-label="Icon title">offline_bolt</mat-icon> .length </h1>
-        <p> Retorna o comprimento da string.
+        <p> Retorna o comprimento da string ou uma lista.
         <div class="c-code">
+            <p>String: {{ nameLength | json }}</p>
+            <p>Length: {{ lengthNmber }}</p>
+            <hr>            
+            <p>List String: {{ nameLengthList | json }}</p>
+            <p>Length: {{ lengthNmberList }}</p>
+            <div>
+                <button mat-raised-button color="primary" (click)="onExecuteLength()">vamos rodar!</button>
+            </div> 
 
         </div>
     </mat-card>

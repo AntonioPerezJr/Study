@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { EveryIten } from './models/everyModel.model';
 import { ReduceIten } from './models/everyModel.model copy';
 import { FilterIten } from './models/filterModel.model';
@@ -205,13 +206,55 @@ export class ArrayMethodsComponent implements OnInit {
   listSpreadFirst: number[] = [1, 2, 3];
   listSpreadSecond: number[] = [10, 20, 30];
   listSpreadThird: number[] = [4, 5, 6];
-  listSpreadResult: number[] = [];
+  listSpreadResult1: number[] = [];
+  listSpreadResult2: number[] = [];
 
   onSpreadCheck(){
-    this.listSpreadResult = [...this.listSpreadFirst, ...this.listSpreadSecond];
+    this.listSpreadResult1 = [...this.listSpreadFirst, ...this.listSpreadSecond];
   }
 
   onSpreadCheckPosition(){
-    this.listSpreadResult = [...this.listSpreadFirst, ...this.listSpreadThird,...this.listSpreadSecond];
+    this.listSpreadResult2 = [...this.listSpreadFirst, ...this.listSpreadThird, ...this.listSpreadSecond];
+  }
+  
+  /**
+  * Implement .reverse()
+  */
+  userReverseList: string[] = ['João', 'Maria','Gustinho'];
+  onExecuteReverse(): void{
+    this.userReverseList = this.userReverseList.reverse();
+  }
+  
+  /**
+  * Implement .push()
+  */
+  public nomeInput: string = 'Novo Nome';
+  userPushList: string[] = ['João', 'Maria','Gustinho'];
+  onExecutePush(): void{
+    this.userPushList.push(this.nomeInput);
+    this.nomeInput = '';
+  }
+
+  /**
+  * Implement .concat()
+  */
+  userConcatList1: string[] = ['João', 'Maria','Gustinho'];
+  userConcatList2: string[] = ['João 2', 'Maria 2','Gustinho 2'];
+  resultConcatList: string[] = [];
+  onExecuteConcat(): void{
+    this.resultConcatList = this.userConcatList1.concat(this.userConcatList2)
+  }
+
+  /**
+  * Implement .concat()
+  */
+   nameLength: string = 'Texto modelo';
+   nameLengthList: string[] = ['João', 'Maria','Gustinho'];
+  
+   lengthNmber: number = 0;
+   lengthNmberList: number = 0;
+  onExecuteLength(): void{
+    this.lengthNmber = this.nameLength.length;
+    this.lengthNmberList = this.nameLengthList.length;
   }
 }
