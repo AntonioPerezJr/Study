@@ -1,4 +1,11 @@
-![Alt text](/src/assets/img/logo.png)
+<p align="center">
+  <img 
+    width="422"
+    height="84"
+    src="/src/assets/img/logo.png"
+  >
+</p>
+<!-- ![Alt text](/src/assets/img/logo.png) -->
 
 # Estudos
 
@@ -32,7 +39,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## 📌 Oservações
+## 📌 Comments
 
 [![npm version](https://badge.fury.io/js/@angular%2Fcore.svg)](https://badge.fury.io/js/@angular%2Fcore)
 
@@ -40,6 +47,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
 ![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+
 <!-- ![Adobe Illustrator](https://img.shields.io/badge/adobeillustrator-%23FF9A00.svg?style=for-the-badge&logo=adobeillustrator&logoColor=white) -->
 <!-- ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) -->
 
