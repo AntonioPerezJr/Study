@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 import { EveryIten } from './models/everyModel.model';
-import { ReduceIten } from './models/everyModel.model copy';
 import { FilterIten } from './models/filterModel.model';
 import { FinsIndexIten } from './models/findIndexModel.model';
 import { FindIten } from './models/findModel.model';
