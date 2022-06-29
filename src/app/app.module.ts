@@ -7,11 +7,13 @@ import { ArrayMethodsComponent } from './pages/array-methods/array-methods.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RxjsMethodsComponent } from './pages/rxjs-methods/rxjs-methods.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArrayMethodsComponent
+    ArrayMethodsComponent,
+    RxjsMethodsComponent
   ],
   imports: [
     BrowserModule,

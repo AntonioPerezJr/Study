@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary" class="c-toolbar">
+    <span class="c-toolbar__title">Study plan</span>
+    <span class="c-toolbar__spacer"></span>
+    <button mat-icon-button class="c-toolbar__btn" aria-label="Example icon-button with heart icon">
+        <mat-icon class="c-toolbar__icon">favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="c-toolbar__btn" aria-label="Example icon-button with share icon">
+        <mat-icon class="c-toolbar__icon">share</mat-icon>
+    </button>
+</mat-toolbar>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
